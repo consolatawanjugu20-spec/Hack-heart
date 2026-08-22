@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Lucy! 🎉</title>
+  <style>
+    :root {
+      --primary-color: #f7a8b8;
+      --accent-color: #d4af37;
+      --bg-color: #fffafb;
+      --text-color: #333333;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 450px;
+      width: 100%;
+      padding: 25px;
+      text-align: center;
+      border: 2px solid var(--primary-color);
+    }
+
+    .image-container {
+      width: 100%;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    h1 {
+      color: var(--accent-color);
+      margin: 10px 0;
+      font-size: 2.2rem;
+    }
+
+    .subtitle {
+      color: var(--primary-color);
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+
+    .quote {
+      font-style: italic;
+      background: #fff0f3;
+      padding: 15px;
+      border-left: 4px solid var(--primary-color);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .btn {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e593a4;
+    }
+
+    /* Confetti animation */
+    .confetti {
+      display: none;
+      font-size: 2rem;
+      margin-top: 15px;
+      animation: bounce 0.6s infinite alternate;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="image-container">
+      <!-- Replace 'lucy.jpg' with your image filename uploaded to GitHub -->
+      <img src="lucy.jpg" alt="Lucy Birthday Picture">
+    </div>
+
+    <h1>Happy Birthday, Lucy! ✨</h1>
+    <div class="subtitle">Celebrating You Today & Always 🎈</div>
+
+    <div class="quote">
+      "I am grateful for all the opportunities I've had to grow and develop this year... I am grateful for every door that was closed, because it was not the right path for me..." 💖
+    </div>
+
+    <button class="btn" onclick="celebrate()">Click to Celebrate! 🎉</button>
+
+    <div class="confetti" id="confetti">
+      🥳 🎈 🎁 🌸 🎉 ✨ ✨ 🎂
+    </div>
+  </div>
+
+  <script>
+    function celebrate() {
+      const confetti = document.getElementById('confetti');
+      if (confetti.style.display === 'block') {
+        confetti.style.display = 'none';
+      } else {
+        confetti.style.display = 'block';
+      }
+    }
+  </script>
+
+</body>
+</html>
